@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes - MEI</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo">
+                <i class="fa-solid fa-address-book"></i>
+                <h1>Controle de Clientes</h1>
+            </div>
+            <p class="subtitle">Gerencie seus contatos e históricos de serviço facilmente.</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Form Section -->
+            <section class="form-section">
+                <div class="card glass-effect">
+                    <h2><i class="fa-solid fa-user-plus"></i> Novo Cliente</h2>
+                    <form id="clientForm">
+                        <input type="hidden" id="clientId">
+                        
+                        <div class="form-group">
+                            <label for="clientName">Nome Completo</label>
+                            <div class="input-wrapper">
+                                <i class="fa-regular fa-user"></i>
+                                <input type="text" id="clientName" placeholder="Ex: João Silva" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="clientPhone">Telefone / WhatsApp</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                    <input type="tel" id="clientPhone" placeholder="(11) 90000-0000" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="clientService">Tipo de Serviço</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-wrench"></i>
+                                    <input type="text" id="clientService" placeholder="Ex: Instalação de tomada" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="clientAddress">Endereço</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <input type="text" id="clientAddress" placeholder="Ex: Rua X, Ipiranga - SP" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="clientNotes">Observações</label>
+                            <div class="input-wrapper align-top">
+                                <i class="fa-regular fa-comment-dots"></i>
+                                <textarea id="clientNotes" rows="3" placeholder="Informações adicionais relevantes..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary" id="saveBtn">
+                                <span class="btn-text">Salvar Cliente</span>
+                                <i class="fa-solid fa-check"></i>
+                            </button>
+                            <button type="button" class="btn btn-secondary" id="cancelBtn" style="display: none;">
+                                Cancelar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- List Section -->
+            <section class="list-section">
+                <div class="card">
+                    <div class="list-header">
+                        <h2><i class="fa-solid fa-users"></i> Meus Clientes</h2>
+                        <div class="search-box">
+                            <i class="fa-solid fa-search"></i>
+                            <input type="text" id="searchInput" placeholder="Buscar cliente...">
+                        </div>
+                    </div>
+                    
+                    <div class="clients-container">
+                        <!-- Empty State -->
+                        <div id="emptyState" class="empty-state">
+                            <div class="empty-icon">
+                                <i class="fa-solid fa-folder-open"></i>
+                            </div>
+                            <h3>Nenhum cliente cadastrado</h3>
+                            <p>Os clientes que você cadastrar aparecerão aqui.</p>
+                        </div>
+
+                        <!-- Clients List -->
+                        <ul id="clientsList" class="clients-list">
+                            <!-- Client cards will be dynamically injected here -->
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
