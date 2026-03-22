@@ -1,47 +1,39 @@
 import React, { useState, useEffect } from 'react';
 import ClientForm from './components/ClientForm';
 import ClientList from './components/ClientList';
-
-const STORAGE_KEY = '@mei_clients';
+import { clientService } from './services/api';
 
 function App() {
   const [clients, setClients] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [editingClient, setEditingClient] = useState(null);
+  const [notification, setNotification] = useState(null);
 
   // Load clients on initial render
   useEffect(() => {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored) {
-      setClients(JSON.parse(stored));
-    }
+    const loadClients = async () => {
+      const data = await clientService.getClients();
+      setClients(data);
+    };
+    loadClients();
   }, []);
 
-  // Save clients whenever they change
-  useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(clients));
-  }, [clients]);
-
-  const addClient = (clientData) => {
-    const newClient = {
-      id: Math.random().toString(36).substring(2, 11) + Date.now().toString(36),
-      createdAt: new Date().toISOString(),
-      ...clientData
-    };
+  const addClient = async (clientData) => {
+    const newClient = await clientService.addClient(clientData);
     setClients([newClient, ...clients]);
     showNotification('Cliente salvo com sucesso!');
   };
 
-  const updateClient = (id, clientData) => {
-    setClients(clients.map(c => 
-      c.id === id ? { ...c, ...clientData, updatedAt: new Date().toISOString() } : c
-    ));
+  const updateClient = async (id, clientData) => {
+    const updatedClient = await clientService.updateClient(id, clientData);
+    setClients(clients.map(c => c.id === id ? updatedClient : c));
     setEditingClient(null);
     showNotification('Cliente atualizado com sucesso!');
   };
 
-  const deleteClient = (id) => {
+  const deleteClient = async (id) => {
     if (window.confirm('Tem certeza que deseja remover este cliente do seu histórico?')) {
+      await clientService.deleteClient(id);
       setClients(clients.filter(c => c.id !== id));
       showNotification('Cliente removido!');
     }
@@ -57,35 +49,9 @@ function App() {
   };
 
   const showNotification = (message) => {
-    const toast = document.createElement('div');
-    toast.textContent = message;
-    
-    Object.assign(toast.style, {
-        position: 'fixed',
-        bottom: '20px',
-        right: '20px',
-        backgroundColor: 'var(--success-color)',
-        color: '#fff',
-        padding: '12px 24px',
-        borderRadius: '8px',
-        boxShadow: 'var(--shadow-lg)',
-        zIndex: '9999',
-        transform: 'translateY(100px)',
-        opacity: '0',
-        transition: 'all 0.3s ease-out'
-    });
-    
-    document.body.appendChild(toast);
-    
+    setNotification(message);
     setTimeout(() => {
-        toast.style.transform = 'translateY(0)';
-        toast.style.opacity = '1';
-    }, 10);
-    
-    setTimeout(() => {
-        toast.style.transform = 'translateY(100px)';
-        toast.style.opacity = '0';
-        setTimeout(() => toast.remove(), 300);
+      setNotification(null);
     }, 3000);
   };
 
@@ -96,6 +62,12 @@ function App() {
 
   return (
     <div className="app-container">
+      {notification && (
+        <div className="notification-toast show">
+          {notification}
+        </div>
+      )}
+      
       <header className="app-header">
         <div className="logo">
           <i className="fa-solid fa-address-book"></i>
