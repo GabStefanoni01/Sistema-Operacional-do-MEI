@@ -1,4 +1,4 @@
-Sistema Operacional do MEI
+🚀 Sistema Operacional do MEI
 
 Plataforma completa para auxiliar Microempreendedores Individuais (MEIs) na gestão do seu negócio, centralizando:
 
@@ -10,7 +10,7 @@ impostos
 
 O objetivo é oferecer uma solução simples, prática e acessível, substituindo controles manuais e desorganizados.
 
-Problema
+🎯 Problema
 
 Muitos MEIs no Brasil ainda gerenciam seus negócios com:
 
@@ -82,11 +82,10 @@ Docker (planejado)
 /
 ├── frontend/   → Aplicação React (em desenvolvimento)
 ├── backend/    → API .NET (em desenvolvimento)
-├── infra/    → Infraestrutura
-├── docs/       → Documentação 
+├── infra/      → Infraestrutura
+├── docs/       → Documentação
 🚀 Como Rodar o Projeto
-
-Frontend (em breve)
+Frontend (em desenvolvimento)
 cd frontend
 npm install
 npm run dev
@@ -94,10 +93,9 @@ npm run dev
 A aplicação estará disponível em:
 
 http://localhost:5173
-Backend (em breve)
+Backend (em desenvolvimento)
 cd backend
 dotnet run
-
 🧠 Roadmap
 v1 (MVP)
  Estrutura inicial do projeto
@@ -113,7 +111,6 @@ v3
  Integração com WhatsApp
  Notificações automáticas
  App mobile
- 
 🤝 Contribuição
 
 Este projeto está sendo desenvolvido como estudo e portfólio.
