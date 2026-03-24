@@ -1,6 +1,6 @@
-🚀 Sistema Operacional do MEI
+🚀 **Sistema Operacional do MEI**
 
-Plataforma completa para auxiliar Microempreendedores Individuais (MEIs) na gestão do seu negócio, centralizando:
+**Plataforma completa para auxiliar Microempreendedores Individuais (MEIs) na gestão do seu negócio, centralizando:**
 
 clientes
 serviços
@@ -8,11 +8,11 @@ agenda
 financeiro
 impostos
 
-O objetivo é oferecer uma solução simples, prática e acessível, substituindo controles manuais e desorganizados.
+**O objetivo é oferecer uma solução simples, prática e acessível, substituindo controles manuais e desorganizados.**
 
 🎯 Problema
 
-Muitos MEIs no Brasil ainda gerenciam seus negócios com:
+**Muitos MEIs no Brasil ainda gerenciam seus negócios com:**
 
 caderno
 WhatsApp
@@ -26,7 +26,7 @@ esquecimento de impostos
 desorganização geral
 💡 Solução
 
-O Sistema Operacional do MEI resolve isso com uma plataforma única que permite:
+**O Sistema Operacional do MEI resolve isso com uma plataforma única que permite:**
 
 organizar clientes
 controlar serviços realizados
@@ -59,7 +59,7 @@ alertas de vencimento
 controle fiscal básico
 🏗️ Arquitetura
 
-O sistema segue uma arquitetura baseada em separação de responsabilidades:
+**O sistema segue uma arquitetura baseada em separação de responsabilidades:**
 
 Frontend (React)
 ↓
@@ -90,7 +90,7 @@ cd frontend
 npm install
 npm run dev
 
-A aplicação estará disponível em:
+**A aplicação estará disponível em:**
 
 http://localhost:5173
 Backend (em desenvolvimento)
