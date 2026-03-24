@@ -1,0 +1,5 @@
+C:\Users\Asus\Documents\Sistema-Operacional-do-MEI\Sistema-Operacional-do-MEI\backend\MeiManager.Domain\obj\Debug\net8.0\MeiManager.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Documents\Sistema-Operacional-do-MEI\Sistema-Operacional-do-MEI\backend\MeiManager.Domain\obj\Debug\net8.0\MeiManager.Domain.AssemblyInfoInputs.cache
+C:\Users\Asus\Documents\Sistema-Operacional-do-MEI\Sistema-Operacional-do-MEI\backend\MeiManager.Domain\obj\Debug\net8.0\MeiManager.Domain.AssemblyInfo.cs
+C:\Users\Asus\Documents\Sistema-Operacional-do-MEI\Sistema-Operacional-do-MEI\backend\MeiManager.Domain\obj\Debug\net8.0\MeiManager.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Documents\Sistema-Operacional-do-MEI\Sistema-Operacional-do-MEI\backend\MeiManager.Domain\obj\Debug\net8.0\MeiManager.Domain.sourcelink.json
