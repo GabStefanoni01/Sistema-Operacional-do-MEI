@@ -129,8 +129,10 @@ PostgreSQL
 **Infraestrutura**
 
 Docker (planejado)
+
 📂 **Estrutura do Projeto**
-/
+
+
 ├── frontend/   → Aplicação React (em desenvolvimento)
 
 ├── backend/    → API .NET (em desenvolvimento)
@@ -140,6 +142,7 @@ Docker (planejado)
 ├── docs/       → Documentação
 
 🚀 **Como Rodar o Projeto**
+
 Frontend (em desenvolvimento)
 
 cd frontend
