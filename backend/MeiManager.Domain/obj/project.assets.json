@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Asus\\Documents\\Sistema-Operacional-do-MEI\\Sistema-Operacional-do-MEI\\MeiManager.Domain\\MeiManager.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Asus\\Documents\\Sistema-Operacional-do-MEI\\Sistema-Operacional-do-MEI\\backend\\MeiManager.Domain\\MeiManager.Domain.csproj",
       "projectName": "MeiManager.Domain",
-      "projectPath": "C:\\Users\\Asus\\Documents\\Sistema-Operacional-do-MEI\\Sistema-Operacional-do-MEI\\MeiManager.Domain\\MeiManager.Domain.csproj",
+      "projectPath": "C:\\Users\\Asus\\Documents\\Sistema-Operacional-do-MEI\\Sistema-Operacional-do-MEI\\backend\\MeiManager.Domain\\MeiManager.Domain.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Asus\\Documents\\Sistema-Operacional-do-MEI\\Sistema-Operacional-do-MEI\\MeiManager.Domain\\obj\\",
+      "outputPath": "C:\\Users\\Asus\\Documents\\Sistema-Operacional-do-MEI\\Sistema-Operacional-do-MEI\\backend\\MeiManager.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config"
