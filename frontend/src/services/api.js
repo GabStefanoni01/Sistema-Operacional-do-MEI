@@ -1,59 +1,52 @@
-const STORAGE_KEY = '@mei_clients';
+// Using localStorage to mock full database interactions per entity for now
+const generateId = () => Math.random().toString(36).substring(2, 11) + Date.now().toString(36);
 
-/**
- * Service to handle client data.
- * Currently using localStorage, but ready to be updated for .NET backend.
- */
-export const clientService = {
-  /**
-   * Get all clients from storage
-   */
-  getClients: async () => {
-    const stored = localStorage.getItem(STORAGE_KEY);
+// Generic function generator for localStorage CRUD
+function createCrudService(keyName) {
+  const getItems = async () => {
+    const stored = localStorage.getItem(keyName);
     return stored ? JSON.parse(stored) : [];
-  },
+  };
 
-  /**
-   * Save all clients to storage
-   */
-  saveClients: async (clients) => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(clients));
-  },
+  const saveItems = async (items) => {
+    localStorage.setItem(keyName, JSON.stringify(items));
+  };
 
-  /**
-   * Add a new client
-   */
-  addClient: async (clientData) => {
-    const clients = await clientService.getClients();
-    const newClient = {
-      id: Math.random().toString(36).substring(2, 11) + Date.now().toString(36),
-      createdAt: new Date().toISOString(),
-      ...clientData
-    };
-    const updated = [newClient, ...clients];
-    await clientService.saveClients(updated);
-    return newClient;
-  },
+  return {
+    getAll: getItems,
+    add: async (data) => {
+      const items = await getItems();
+      const newItem = { id: generateId(), createdAt: new Date().toISOString(), ...data };
+      await saveItems([newItem, ...items]);
+      return newItem;
+    },
+    update: async (id, data) => {
+      const items = await getItems();
+      const updated = items.map(item => item.id === id ? { ...item, ...data, updatedAt: new Date().toISOString() } : item);
+      await saveItems(updated);
+      return updated.find(item => item.id === id);
+    },
+    delete: async (id) => {
+      const items = await getItems();
+      await saveItems(items.filter(item => item.id !== id));
+      return true;
+    }
+  };
+}
 
-  /**
-   * Update an existing client
-   */
-  updateClient: async (id, clientData) => {
-    const clients = await clientService.getClients();
-    const updated = clients.map(c => 
-      c.id === id ? { ...c, ...clientData, updatedAt: new Date().toISOString() } : c
-    );
-    await clientService.saveClients(updated);
-    return updated.find(c => c.id === id);
-  },
-
-  /**
-   * Delete a client
-   */
-  deleteClient: async (id) => {
-    const clients = await clientService.getClients();
-    const updated = clients.filter(c => c.id !== id);
-    await clientService.saveClients(updated);
-    return true;
-  }
+// Client Service mapping (keeping original method names for backwards compatibility with ClientList)
+const baseClientService = createCrudService('@mei_clients');
+export const clientService = {
+  getClients: baseClientService.getAll,
+  addClient: baseClientService.add,
+  updateClient: baseClientService.update,
+  deleteClient: baseClientService.delete
 };
+
+// New Services Exported
+export const serviceService = createCrudService('@mei_services');
+export const appointmentService = createCrudService('@mei_appointments');
+export const historyService = createCrudService('@mei_history');
+export const transactionService = createCrudService('@mei_transactions');
+export const budgetService = createCrudService('@mei_budgets');
+export const taxService = createCrudService('@mei_taxes');
