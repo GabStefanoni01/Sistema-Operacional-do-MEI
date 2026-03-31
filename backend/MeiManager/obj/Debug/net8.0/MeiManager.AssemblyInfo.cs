@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MeiManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2969a44dadc0ce4f7121e503d3f36718e1b5fc9b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c6b411ae6ca27b41032c463f05d9f07f7e3614b")]
 [assembly: System.Reflection.AssemblyProductAttribute("MeiManager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MeiManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
