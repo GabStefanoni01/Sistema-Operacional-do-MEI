@@ -1,6 +1,6 @@
 namespace MeiManager.Domain.Entities;
 
-public class Client : BaseEntity
+public class Service : BaseEntity
 {
     public int UserId { get; set; }
     public string Name { get; set; } = string.Empty;
@@ -11,5 +11,4 @@ public class Client : BaseEntity
 
     // Relacionamentos
     public User User { get; set; } = null!;
-    public ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
 }
