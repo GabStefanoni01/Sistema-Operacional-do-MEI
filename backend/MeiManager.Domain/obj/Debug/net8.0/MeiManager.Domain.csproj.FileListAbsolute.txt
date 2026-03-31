@@ -3,3 +3,10 @@ C:\Users\Asus\Documents\Sistema-Operacional-do-MEI\Sistema-Operacional-do-MEI\ba
 C:\Users\Asus\Documents\Sistema-Operacional-do-MEI\Sistema-Operacional-do-MEI\backend\MeiManager.Domain\obj\Debug\net8.0\MeiManager.Domain.AssemblyInfo.cs
 C:\Users\Asus\Documents\Sistema-Operacional-do-MEI\Sistema-Operacional-do-MEI\backend\MeiManager.Domain\obj\Debug\net8.0\MeiManager.Domain.csproj.CoreCompileInputs.cache
 C:\Users\Asus\Documents\Sistema-Operacional-do-MEI\Sistema-Operacional-do-MEI\backend\MeiManager.Domain\obj\Debug\net8.0\MeiManager.Domain.sourcelink.json
+C:\Users\Asus\Documents\Sistema-Operacional-do-MEI\Sistema-Operacional-do-MEI\backend\MeiManager.Domain\bin\Debug\net8.0\MeiManager.Domain.deps.json
+C:\Users\Asus\Documents\Sistema-Operacional-do-MEI\Sistema-Operacional-do-MEI\backend\MeiManager.Domain\bin\Debug\net8.0\MeiManager.Domain.dll
+C:\Users\Asus\Documents\Sistema-Operacional-do-MEI\Sistema-Operacional-do-MEI\backend\MeiManager.Domain\bin\Debug\net8.0\MeiManager.Domain.pdb
+C:\Users\Asus\Documents\Sistema-Operacional-do-MEI\Sistema-Operacional-do-MEI\backend\MeiManager.Domain\obj\Debug\net8.0\MeiManager.Domain.dll
+C:\Users\Asus\Documents\Sistema-Operacional-do-MEI\Sistema-Operacional-do-MEI\backend\MeiManager.Domain\obj\Debug\net8.0\refint\MeiManager.Domain.dll
+C:\Users\Asus\Documents\Sistema-Operacional-do-MEI\Sistema-Operacional-do-MEI\backend\MeiManager.Domain\obj\Debug\net8.0\MeiManager.Domain.pdb
+C:\Users\Asus\Documents\Sistema-Operacional-do-MEI\Sistema-Operacional-do-MEI\backend\MeiManager.Domain\obj\Debug\net8.0\ref\MeiManager.Domain.dll
